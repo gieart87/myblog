@@ -9,9 +9,9 @@ import (
 
 type Post struct {
 	orm.Model
-	Title  string
-	Body   string
-	Status string
+	Title  string `json:"title"`
+	Body   string `json:"body"`
+	Status string `json:"status"`
 }
 
 func (p *Post) Factory() factory.Factory {
