@@ -8,6 +8,8 @@ import (
 
 func Api() {
 	userController := controllers.NewUserController()
+	facades.Route().Post("/register", userController.Register)
+	facades.Route().Post("/login", userController.Login)
 	facades.Route().Get("/users/{id}", userController.Show)
 
 	postContoller := controllers.NewPostController()
